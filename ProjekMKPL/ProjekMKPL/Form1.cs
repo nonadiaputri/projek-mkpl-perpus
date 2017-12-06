@@ -19,6 +19,9 @@ namespace ProjekMKPL
         }
 
         MySqlConnection conn = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=;database=perpus");
+        MySqlCommand cmd;
+        MySqlDataAdapter dta;
+        DataTable dt;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,28 +62,27 @@ namespace ProjekMKPL
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            String query = "SELECT * FROM buku WHERE JUDUL='"+tbSearch.Text+"'";
-            MySqlDataReader read;
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            read = cmd.ExecuteReader();
-            if (read.Read())
-            {
-                Home hm = new Home();
-                hm.Show();
-                this.Hide();
-
-            }
-            else
-            {
-                MessageBox.Show("login gagal");
-            }
-            conn.Close();
+            string ValueToSearch = tbSearch.Text;
+            SearchData(ValueToSearch); 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+        
+
+        public void SearchData(String ValueToSearch)
         {
-           
+            String query="SELECT * FROM buku WHERE JUDUL like '%"+ValueToSearch+"%'";
+            cmd = new MySqlCommand(query, conn);
+            dta = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            dta.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {    
+            SearchData("");
         }
     }
 }
