@@ -20,6 +20,7 @@ namespace ProjekMKPL
         public DaftarBuku()
         {
             InitializeComponent();
+            this.refresh_data_buku();
         }
         
         public void show_form()
@@ -41,5 +42,36 @@ namespace ProjekMKPL
             return connection;
         }
 
+
+        public void refresh_data_buku()
+        {
+            MySqlConnection conn = this.makeDatabaseConnection();
+
+            try
+            {
+                conn.Open();
+
+                String sql =
+                    "SELECT * FROM buku ";
+
+                MySqlCommand command = new MySqlCommand(sql, conn);
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                this.dgvBuku.DataSource = dt;
+
+                conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
