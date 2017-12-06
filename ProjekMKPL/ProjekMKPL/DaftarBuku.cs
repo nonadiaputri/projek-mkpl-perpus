@@ -80,5 +80,25 @@ namespace ProjekMKPL
             formTambahBuku.Show();
             this.Hide();
         }
+
+        private void btEditBuku_Click(object sender, EventArgs e)
+        {
+
+            if (dgvBuku.CurrentRow != null)
+            {
+                String id = this.dgvBuku.SelectedRows[0].Cells[0].Value.ToString();
+
+                formEditBuku = new EditBuku(this, id);
+                formEditBuku.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("pilih buku yang akan diupdate");
+            }
+
+
+        }
     }
 }

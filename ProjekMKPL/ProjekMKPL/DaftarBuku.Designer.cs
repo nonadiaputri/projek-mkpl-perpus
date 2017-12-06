@@ -71,6 +71,7 @@
             this.btEditBuku.TabIndex = 3;
             this.btEditBuku.Text = "Edit Buku";
             this.btEditBuku.UseVisualStyleBackColor = true;
+            this.btEditBuku.Click += new System.EventHandler(this.btEditBuku_Click);
             // 
             // DaftarBuku
             // 
