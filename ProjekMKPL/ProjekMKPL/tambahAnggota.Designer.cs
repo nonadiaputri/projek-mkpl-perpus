@@ -208,7 +208,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "tambahAnggota";
-            this.Text = "7";
+            this.Text = "Tambah Anggota";
             this.ResumeLayout(false);
             this.PerformLayout();
 

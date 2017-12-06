@@ -38,8 +38,9 @@
             // 
             // dataGridViewAnggota
             // 
+            this.dataGridViewAnggota.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewAnggota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAnggota.Location = new System.Drawing.Point(22, 76);
+            this.dataGridViewAnggota.Location = new System.Drawing.Point(33, 93);
             this.dataGridViewAnggota.Name = "dataGridViewAnggota";
             this.dataGridViewAnggota.Size = new System.Drawing.Size(463, 240);
             this.dataGridViewAnggota.TabIndex = 0;
@@ -47,7 +48,7 @@
             // 
             // buttonTambahAnggota
             // 
-            this.buttonTambahAnggota.Location = new System.Drawing.Point(513, 102);
+            this.buttonTambahAnggota.Location = new System.Drawing.Point(517, 93);
             this.buttonTambahAnggota.Name = "buttonTambahAnggota";
             this.buttonTambahAnggota.Size = new System.Drawing.Size(105, 23);
             this.buttonTambahAnggota.TabIndex = 1;
