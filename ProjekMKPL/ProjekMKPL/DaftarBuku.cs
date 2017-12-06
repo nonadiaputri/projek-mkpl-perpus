@@ -73,5 +73,12 @@ namespace ProjekMKPL
             }
 
         }
+
+        private void btTambahBuku_Click(object sender, EventArgs e)
+        {
+            formTambahBuku = new tambahBuku(this);
+            formTambahBuku.Show();
+            this.Hide();
+        }
     }
 }

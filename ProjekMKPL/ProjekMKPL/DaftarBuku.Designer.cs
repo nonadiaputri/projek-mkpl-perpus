@@ -61,6 +61,7 @@
             this.btTambahBuku.TabIndex = 2;
             this.btTambahBuku.Text = "Tambah Buku";
             this.btTambahBuku.UseVisualStyleBackColor = true;
+            this.btTambahBuku.Click += new System.EventHandler(this.btTambahBuku_Click);
             // 
             // btEditBuku
             // 
