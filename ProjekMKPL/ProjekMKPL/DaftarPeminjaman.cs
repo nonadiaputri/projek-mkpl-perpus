@@ -95,7 +95,7 @@ namespace ProjekMKPL
 
         private void lbPengembalian_Click(object sender, EventArgs e)
         {
-
+            this.change_status();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace ProjekMKPL
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            this.change_status();
         }
 
         public void change_status()
@@ -115,7 +115,7 @@ namespace ProjekMKPL
 
             if (dgvPeminjaman.CurrentRow != null)
             {
-                String id = this.dgvPeminjaman.SelectedRows[0].Cells[0].Value.ToString();
+                int id = Convert.ToInt16(this.dgvPeminjaman.SelectedRows[0].Cells[0].Value.ToString());
                 DialogResult dr = MessageBox.Show("kembalikan buku dengan id peminjaman " + id, "Info", MessageBoxButtons.YesNo);
 
 
@@ -128,12 +128,13 @@ namespace ProjekMKPL
                         conn.Open();
 
                         String sql = "UPDATE peminjaman " +
-                            "SET status = @status " +
-                            "WHERE ID_PEMINJAMAN = @id";
+                            "SET STATUS=@status " +
+                            "WHERE ID_PEMINJAMAN=@id;";
 
                         MySqlCommand command = new MySqlCommand(sql, conn);
 
                         command.Parameters.AddWithValue("@status", false);
+                        command.Parameters.AddWithValue("@id", id);
 
                         int affectedRows = command.ExecuteNonQuery();//nonquery karena tidak mengambil data tapi mengirimkan data
 
