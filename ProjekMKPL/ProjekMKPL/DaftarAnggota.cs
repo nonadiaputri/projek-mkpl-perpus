@@ -16,9 +16,69 @@ namespace ProjekMKPL
         public DaftarAnggota()
         {
             InitializeComponent();
+            this.refresh_data_anggota();
 
         }
-        
-        
+
+        public void refresh_data_anggota()
+        {
+            MySqlConnection conn = this.makeDatabaseConnection();
+
+            try
+            {
+                conn.Open();
+
+                String sql =
+                    "SELECT * " +
+                    "FROM anggota ";
+
+                MySqlCommand command = new MySqlCommand(sql, conn);
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                this.dataGridViewAnggota.DataSource = dt;
+                conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        public void show_form()
+        {
+            this.Show();
+        }
+
+        public MySqlConnection makeDatabaseConnection()
+        {
+            MySqlConnection connection = new MySqlConnection();
+            String connString =
+                "Server=127.0.0.1;" +
+                "uid=root;" +
+                "pwd=;" +
+                "database=perpus";
+
+            connection.ConnectionString = connString;
+
+            return connection;
+        }
+
+
+        private void DaftarAnggota_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewAnggota_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
