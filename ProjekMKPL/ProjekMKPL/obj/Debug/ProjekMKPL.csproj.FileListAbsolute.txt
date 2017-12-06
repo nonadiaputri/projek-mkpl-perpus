@@ -51,3 +51,4 @@ C:\Users\HP\Source\Repos\projek-mkpl-perpus\ProjekMKPL\ProjekMKPL\obj\Debug\Proj
 C:\Users\HP\Source\Repos\projek-mkpl-perpus\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.exe
 C:\Users\HP\Source\Repos\projek-mkpl-perpus\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.pdb
 C:\Users\S.N.W.A\Source\Repos\projek-mkpl-perpus\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.DaftarPeminjaman.resources
+C:\Users\S.N.W.A\Source\Repos\projek-mkpl-perpus\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.TambahPeminjaman.resources

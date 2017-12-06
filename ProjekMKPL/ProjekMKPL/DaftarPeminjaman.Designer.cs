@@ -53,6 +53,7 @@
             this.lbPengembalian.Size = new System.Drawing.Size(127, 16);
             this.lbPengembalian.TabIndex = 25;
             this.lbPengembalian.Text = "Kembalikan Buku";
+            this.lbPengembalian.Click += new System.EventHandler(this.lbPengembalian_Click);
             // 
             // lbTambahPeminjaman
             // 
@@ -64,6 +65,7 @@
             this.lbTambahPeminjaman.Size = new System.Drawing.Size(93, 16);
             this.lbTambahPeminjaman.TabIndex = 23;
             this.lbTambahPeminjaman.Text = "Pinjam Buku";
+            this.lbTambahPeminjaman.Click += new System.EventHandler(this.lbTambahPeminjaman_Click);
             // 
             // pictureBox4
             // 
@@ -74,6 +76,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(36, 36);
             this.pictureBox4.TabIndex = 22;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -84,6 +87,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(36, 36);
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label2
             // 
@@ -126,8 +130,10 @@
             this.dgvPeminjaman.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPeminjaman.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvPeminjaman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeminjaman.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvPeminjaman.Location = new System.Drawing.Point(12, 71);
             this.dgvPeminjaman.Name = "dgvPeminjaman";
+            this.dgvPeminjaman.RowHeadersVisible = false;
             this.dgvPeminjaman.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPeminjaman.ShowRowErrors = false;
             this.dgvPeminjaman.Size = new System.Drawing.Size(516, 290);

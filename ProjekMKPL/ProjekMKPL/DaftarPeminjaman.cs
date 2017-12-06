@@ -13,6 +13,9 @@ namespace ProjekMKPL
 {
     public partial class DaftarPeminjaman : Form
     {
+
+        TambahPeminjaman formTambahPeminjaman;
+
         public DaftarPeminjaman()
         {
             InitializeComponent();
@@ -73,6 +76,38 @@ namespace ProjekMKPL
             Home d = new Home();
             d.Show();
             this.Hide();
+        }
+
+        private void lbTambahPeminjaman_Click(object sender, EventArgs e)
+        {
+            if(this.formTambahPeminjaman == null)
+            {
+                this.formTambahPeminjaman = new TambahPeminjaman(this);
+            }
+
+            this.formTambahPeminjaman.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (this.formTambahPeminjaman == null)
+            {
+                this.formTambahPeminjaman = new TambahPeminjaman(this);
+            }
+
+            this.formTambahPeminjaman.Show();
+            this.Hide();
+        }
+
+        private void lbPengembalian_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
