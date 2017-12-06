@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaftarBuku));
             this.dgvBuku = new System.Windows.Forms.DataGridView();
             this.btHapusBuku = new System.Windows.Forms.Button();
             this.btTambahBuku = new System.Windows.Forms.Button();
             this.btEditBuku = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuku)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBuku
@@ -74,11 +77,23 @@
             this.btEditBuku.UseVisualStyleBackColor = true;
             this.btEditBuku.Click += new System.EventHandler(this.btEditBuku_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // DaftarBuku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 373);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btEditBuku);
             this.Controls.Add(this.btTambahBuku);
             this.Controls.Add(this.btHapusBuku);
@@ -86,6 +101,7 @@
             this.Name = "DaftarBuku";
             this.Text = "Daftar Buku";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuku)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -96,5 +112,6 @@
         private System.Windows.Forms.Button btHapusBuku;
         private System.Windows.Forms.Button btTambahBuku;
         private System.Windows.Forms.Button btEditBuku;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -80,5 +80,21 @@ namespace ProjekMKPL
         {
 
         }
+
+        private void buttonTambahAnggota_Click(object sender, EventArgs e)
+        {
+
+            tambahAnggota formTambahAnggota = new tambahAnggota(this);
+            formTambahAnggota.Show();
+            this.Hide();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Home d = new Home();
+            d.Show();
+            this.Hide();
+        }
     }
 }

@@ -144,5 +144,11 @@ namespace ProjekMKPL
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Home d = new Home();
+            d.Show();
+            this.Hide();
+        }
     }
 }
