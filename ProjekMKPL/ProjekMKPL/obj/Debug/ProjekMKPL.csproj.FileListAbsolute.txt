@@ -1,0 +1,21 @@
+C:\Users\S.N.W.A\Documents\Visual Studio 2015\Projects\ProjekMKPL\ProjekMKPL\bin\Debug\ProjekMKPL.exe.config
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\bin\Debug\ProjekMKPL.exe.config
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.csprojResolveAssemblyReference.cache
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.Daftar_Anggota.resources
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.DaftarBuku.resources
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.EditBuku.resources
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.Form1.resources
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.Home.resources
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.Properties.Resources.resources
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.tambahAnggota.resources
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.tambahBuku.resources
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.csproj.GenerateResource.Cache
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\bin\Debug\ProjekMKPL.exe
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\bin\Debug\ProjekMKPL.pdb
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\bin\Debug\MySql.Data.dll
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\bin\Debug\MySql.Data.xml
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.exe
+C:\Users\S.N.W.A\Source\Repos\FinalProject_MKPL_Kelompok3\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.pdb
+C:\Users\S.N.W.A\Source\Repos\projek-mkpl-perpus\ProjekMKPL\ProjekMKPL\bin\Debug\ProjekMKPL.exe.config
+C:\Users\S.N.W.A\Source\Repos\projek-mkpl-perpus\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.exe
+C:\Users\S.N.W.A\Source\Repos\projek-mkpl-perpus\ProjekMKPL\ProjekMKPL\obj\Debug\ProjekMKPL.pdb
