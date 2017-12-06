@@ -35,16 +35,65 @@ namespace ProjekMKPL
             return connection;
         }
 
-        private void btBatal_Click(object sender, EventArgs e)
-        {
-            DaftarBuku DB = new DaftarBuku();
-            DB.Show();
-            this.Hide();
-        }
 
         private void btSimpan_Click(object sender, EventArgs e)
         {
+            if (tbJudul.Text != "" && tbPengarang.Text != "" && tbPenerbit.Text != "" && tbTahunTerbit.Text != "" && tbNomorSeri.Text != "" && rbDeskripsi.Text != "")
+            {
+                MySqlConnection conn = this.makeDatabaseConnection();
 
+                try
+                {
+                    conn.Open();
+
+                    String sql = "INSERT INTO buku " +
+                        "(JUDUL, PENGARANG, PENERBIT, TAHUNTERBIT, NOMORSERI, HALAMAN, DESKRIPSI, GAMBAR) VALUES " +
+                        "(@judul, @pengarang, @penerbit, @tahunterbit, @nomorseri, @halaman, @deskripsi, @gambar) ";
+
+                    MySqlCommand command = new MySqlCommand(sql, conn);
+
+
+                    command.Parameters.AddWithValue("@judul", tbJudul.Text);
+                    command.Parameters.AddWithValue("@pengarang", tbPengarang.Text);
+                    command.Parameters.AddWithValue("@penerbit", tbPenerbit.Text);
+                    command.Parameters.AddWithValue("@tahunterbit", tbTahunTerbit.Text);
+                    command.Parameters.AddWithValue("@nomorseri", tbNomorSeri.Text);
+                    command.Parameters.AddWithValue("@halaman", tbHalaman.Text);
+                    command.Parameters.AddWithValue("@deskripsi", rbDeskripsi.Text);
+                    command.Parameters.AddWithValue("@gambar", "buku.jpg");
+
+                    int affectedRows = command.ExecuteNonQuery();//nonquery karena tidak mengambil data tapi mengirimkan data
+
+                    conn.Close();
+
+                    DialogResult d = MessageBox.Show("data berhasil disimpan", "", MessageBoxButtons.OK);
+                    if (d == DialogResult.OK)
+                    {
+                        tbJudul.Text = "";
+                        tbPengarang.Text = "";
+                        tbNomorSeri.Text = "";
+                        tbPenerbit.Text = "";
+                        tbHalaman.Text = "";
+                        rbDeskripsi.Text = "";
+                        tbTahunTerbit.Text = "";
+
+                        this.Hide();
+                        formParent.refresh_data_buku();
+                        formParent.show_form();
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Semua field harus diisi");
+            }
         }
     }
 
