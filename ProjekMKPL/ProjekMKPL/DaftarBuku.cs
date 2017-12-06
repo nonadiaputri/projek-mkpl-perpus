@@ -20,6 +20,26 @@ namespace ProjekMKPL
         public DaftarBuku()
         {
             InitializeComponent();
-         
-        }    }
+        }
+        
+        public void show_form()
+        {
+            this.Show();
+        }
+
+        public MySqlConnection makeDatabaseConnection()
+        {
+            MySqlConnection connection = new MySqlConnection();
+            String connString =
+                "Server=127.0.0.1;" +
+                "uid=root;" +
+                "pwd=;" +
+                "database=perpus";
+
+            connection.ConnectionString = connString;
+
+            return connection;
+        }
+
+    }
 }
