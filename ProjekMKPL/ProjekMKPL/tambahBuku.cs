@@ -95,6 +95,13 @@ namespace ProjekMKPL
                 MessageBox.Show("Semua field harus diisi");
             }
         }
+
+        private void btBatal_Click(object sender, EventArgs e)
+        {
+            DaftarBuku db = new DaftarBuku();
+            db.Show();
+            this.Hide();
+        }
     }
 
 }

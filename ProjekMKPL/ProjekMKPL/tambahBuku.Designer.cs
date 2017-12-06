@@ -54,6 +54,7 @@
             this.btBatal.TabIndex = 31;
             this.btBatal.Text = "Batal";
             this.btBatal.UseVisualStyleBackColor = true;
+            this.btBatal.Click += new System.EventHandler(this.btBatal_Click);
             // 
             // btSimpan
             // 
