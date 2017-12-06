@@ -17,7 +17,7 @@ namespace ProjekMKPL
             InitializeComponent();
         }
 
-       private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             DaftarBuku db = new DaftarBuku();
             db.Show();
@@ -38,6 +38,13 @@ namespace ProjekMKPL
             frm1.Show();
             this.Hide();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DaftarPeminjaman dp = new DaftarPeminjaman();
+            dp.Show();
+            this.Hide();
         }
     }
 }
