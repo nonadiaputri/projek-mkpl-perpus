@@ -42,10 +42,19 @@
             // 
             // dataGridViewAnggota
             // 
+            this.dataGridViewAnggota.AllowUserToAddRows = false;
+            this.dataGridViewAnggota.AllowUserToDeleteRows = false;
+            this.dataGridViewAnggota.AllowUserToResizeRows = false;
+            this.dataGridViewAnggota.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAnggota.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridViewAnggota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAnggota.Location = new System.Drawing.Point(33, 93);
             this.dataGridViewAnggota.Name = "dataGridViewAnggota";
+            this.dataGridViewAnggota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewAnggota.ShowCellErrors = false;
+            this.dataGridViewAnggota.ShowCellToolTips = false;
+            this.dataGridViewAnggota.ShowEditingIcon = false;
+            this.dataGridViewAnggota.ShowRowErrors = false;
             this.dataGridViewAnggota.Size = new System.Drawing.Size(463, 240);
             this.dataGridViewAnggota.TabIndex = 0;
             this.dataGridViewAnggota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAnggota_CellContentClick);

@@ -52,7 +52,7 @@ namespace ProjekMKPL
                 conn.Open();
 
                 String sql =
-                    "SELECT * FROM buku ";
+                    "SELECT ID_BUKU, JUDUL, PENGARANG, TAHUNTERBIT FROM buku ";
 
                 MySqlCommand command = new MySqlCommand(sql, conn);
 

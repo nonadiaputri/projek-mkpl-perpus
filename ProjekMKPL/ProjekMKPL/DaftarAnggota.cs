@@ -29,8 +29,7 @@ namespace ProjekMKPL
                 conn.Open();
 
                 String sql =
-                    "SELECT * " +
-                    "FROM anggota ";
+                    "SELECT ID_ANGGOTA, NAMA, EMAIL, JURUSAN FROM anggota ";
 
                 MySqlCommand command = new MySqlCommand(sql, conn);
 
