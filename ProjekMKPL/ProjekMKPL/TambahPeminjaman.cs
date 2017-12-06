@@ -44,12 +44,13 @@ namespace ProjekMKPL
             {
                 conn.Open();
 
+                String nim = tbSearchNIM.Text;
                 String sql =
-                    "SELECT ID_ANGGOTA as ID, NIM as NIM , NAMA as NAMA FROM anggota WHERE NIM=@nim;";
+                    "SELECT ID_ANGGOTA as ID, NIM as NIM , NAMA as NAMA FROM anggota WHERE NIM LIKE '%" + nim + "%';";
 
                 MySqlCommand command = new MySqlCommand(sql, conn);
 
-                command.Parameters.AddWithValue("@nim", tbSearchNIM.Text);
+                //command.Parameters.AddWithValue("@nim", tbSearchNIM.Text);
 
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -76,12 +77,13 @@ namespace ProjekMKPL
             {
                 conn.Open();
 
+                String judul = tbSearchBuku.Text;
                 String sql =
-                    "SELECT ID_BUKU as ID, JUDUL as JUDUL, PENGARANG as PENGARANG FROM buku WHERE JUDUL LIKE @judul;";
+                    "SELECT ID_BUKU as ID, JUDUL as JUDUL, PENGARANG as PENGARANG FROM buku WHERE CONCAT(`JUDUL`, `PENGARANG`, `PENERBIT`) LIKE '%"+judul+"%';";
 
                 MySqlCommand command = new MySqlCommand(sql, conn);
 
-                command.Parameters.AddWithValue("@judul", tbSearchBuku.Text);
+                //command.Parameters.AddWithValue("@judul", tbSearchBuku.Text);
 
                 MySqlDataReader reader = command.ExecuteReader();
 
