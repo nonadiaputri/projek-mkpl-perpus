@@ -16,21 +16,69 @@ namespace ProjekMKPL
         public DaftarAnggota()
         {
             InitializeComponent();
+            this.refresh_data_anggota();
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        public void refresh_data_anggota()
         {
-            Home hm = new Home();
-            hm.Show();
-            this.Hide();
+            MySqlConnection conn = this.makeDatabaseConnection();
+
+            try
+            {
+                conn.Open();
+
+                String sql =
+                    "SELECT * " +
+                    "FROM anggota ";
+
+                MySqlCommand command = new MySqlCommand(sql, conn);
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                this.dataGridViewAnggota.DataSource = dt;
+                conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
-        private void buttonTambahAnggota_Click(object sender, EventArgs e)
+        public void show_form()
         {
-            tambahAnggota tang = new tambahAnggota(this);
-            tang.Show();
-            this.Hide();
+            this.Show();
+        }
+
+        public MySqlConnection makeDatabaseConnection()
+        {
+            MySqlConnection connection = new MySqlConnection();
+            String connString =
+                "Server=127.0.0.1;" +
+                "uid=root;" +
+                "pwd=;" +
+                "database=perpus";
+
+            connection.ConnectionString = connString;
+
+            return connection;
+        }
+
+
+        private void DaftarAnggota_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewAnggota_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

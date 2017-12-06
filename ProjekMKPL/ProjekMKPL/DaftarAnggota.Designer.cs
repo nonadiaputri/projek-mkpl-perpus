@@ -43,6 +43,7 @@
             this.dataGridViewAnggota.Name = "dataGridViewAnggota";
             this.dataGridViewAnggota.Size = new System.Drawing.Size(463, 240);
             this.dataGridViewAnggota.TabIndex = 0;
+            this.dataGridViewAnggota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAnggota_CellContentClick);
             // 
             // buttonTambahAnggota
             // 
@@ -76,6 +77,7 @@
             this.Controls.Add(this.dataGridViewAnggota);
             this.Name = "DaftarAnggota";
             this.Text = "Daftar Anggota";
+            this.Load += new System.EventHandler(this.DaftarAnggota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAnggota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

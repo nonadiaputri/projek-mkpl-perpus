@@ -173,6 +173,7 @@
             this.buttonSimpan.TabIndex = 14;
             this.buttonSimpan.Text = "Simpan";
             this.buttonSimpan.UseVisualStyleBackColor = true;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonBatal
             // 
@@ -207,8 +208,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "tambahAnggota";
-            this.Text = "Tambah Anggota";
-            this.Load += new System.EventHandler(this.tambahAnggota_Load);
+            this.Text = "7";
             this.ResumeLayout(false);
             this.PerformLayout();
 
