@@ -16,6 +16,7 @@ namespace ProjekMKPL
 
         tambahBuku formTambahBuku;
         EditBuku formEditBuku;
+        LihatDetail formLihatDetail;
 
         public DaftarBuku()
         {
@@ -287,6 +288,40 @@ namespace ProjekMKPL
             else
             {
                 MessageBox.Show("pilih buku yang akan diupdate");
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (dgvBuku.CurrentRow != null)
+            {
+                String id = this.dgvBuku.SelectedRows[0].Cells[0].Value.ToString();
+
+                LihatDetail ld = new LihatDetail(this, id);
+                ld.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("pilih buku yang akan dilihat detail");
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            if (dgvBuku.CurrentRow != null)
+            {
+                String id = this.dgvBuku.SelectedRows[0].Cells[0].Value.ToString();
+
+                LihatDetail ld = new LihatDetail(this, id);
+                ld.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("pilih buku yang akan dilihat detail");
             }
         }
     }

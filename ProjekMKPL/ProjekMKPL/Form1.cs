@@ -46,5 +46,41 @@ namespace ProjekMKPL
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            String query = "SELECT * FROM buku WHERE JUDUL='"+tbSearch.Text+"'";
+            MySqlDataReader read;
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            read = cmd.ExecuteReader();
+            if (read.Read())
+            {
+                Home hm = new Home();
+                hm.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("login gagal");
+            }
+            conn.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
     }
 }
