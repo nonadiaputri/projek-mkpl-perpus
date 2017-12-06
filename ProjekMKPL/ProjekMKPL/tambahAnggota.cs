@@ -19,6 +19,18 @@ namespace ProjekMKPL
             InitializeComponent();
             this.formParent = parent;
         }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
+            DaftarAnggota da = new DaftarAnggota();
+            da.Show();
+            this.Hide();
+        }
+
+        private void tambahAnggota_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

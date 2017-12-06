@@ -54,6 +54,7 @@
             this.btBatal.TabIndex = 31;
             this.btBatal.Text = "Batal";
             this.btBatal.UseVisualStyleBackColor = true;
+            this.btBatal.Click += new System.EventHandler(this.btBatal_Click);
             // 
             // btSimpan
             // 
@@ -63,6 +64,7 @@
             this.btSimpan.TabIndex = 30;
             this.btSimpan.Text = "Simpan";
             this.btSimpan.UseVisualStyleBackColor = true;
+            this.btSimpan.Click += new System.EventHandler(this.btSimpan_Click);
             // 
             // tbNomorSeri
             // 
@@ -207,7 +209,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "tambahBuku";
-            this.Text = "tambahBuku";
+            this.Text = "Tambah Buku";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -52,6 +52,7 @@
             this.buttonTambahAnggota.TabIndex = 1;
             this.buttonTambahAnggota.Text = "Tambah Anggota ";
             this.buttonTambahAnggota.UseVisualStyleBackColor = true;
+            this.buttonTambahAnggota.Click += new System.EventHandler(this.buttonTambahAnggota_Click);
             // 
             // pictureBox1
             // 
@@ -62,6 +63,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(33, 34);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // DaftarAnggota
             // 

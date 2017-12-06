@@ -18,7 +18,19 @@ namespace ProjekMKPL
             InitializeComponent();
 
         }
-        
-        
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Home hm = new Home();
+            hm.Show();
+            this.Hide();
+        }
+
+        private void buttonTambahAnggota_Click(object sender, EventArgs e)
+        {
+            tambahAnggota tang = new tambahAnggota(this);
+            tang.Show();
+            this.Hide();
+        }
     }
 }

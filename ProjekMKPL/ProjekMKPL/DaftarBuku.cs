@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProjekMKPL
 {
     public partial class DaftarBuku : Form
@@ -21,5 +22,27 @@ namespace ProjekMKPL
         {
             InitializeComponent();
          
-        }    }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Home hm = new Home();
+            hm.Show();
+            this.Hide();
+        }
+
+        private void btTambahBuku_Click(object sender, EventArgs e)
+        {
+            tambahBuku tbk = new tambahBuku(this);
+            tbk.Show();
+            this.Hide();
+        }
+
+        private void btEditBuku_Click(object sender, EventArgs e)
+        {
+            EditBuku eb = new EditBuku();
+            eb.Show();
+            this.Hide();
+        }
+    }
 }

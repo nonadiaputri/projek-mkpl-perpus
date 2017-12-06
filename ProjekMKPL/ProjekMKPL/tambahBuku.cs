@@ -34,6 +34,18 @@ namespace ProjekMKPL
 
             return connection;
         }
+
+        private void btBatal_Click(object sender, EventArgs e)
+        {
+            DaftarBuku DB = new DaftarBuku();
+            DB.Show();
+            this.Hide();
+        }
+
+        private void btSimpan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

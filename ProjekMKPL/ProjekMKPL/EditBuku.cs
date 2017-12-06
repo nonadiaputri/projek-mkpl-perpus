@@ -33,6 +33,14 @@ namespace ProjekMKPL
             connection.ConnectionString = connString;
 
             return connection;
-        }    }
+        }
+
+        private void btBatal_Click(object sender, EventArgs e)
+        {
+            DaftarBuku DB = new DaftarBuku();
+            DB.Show();
+            this.Hide();
+        }
+    }
 
 }
